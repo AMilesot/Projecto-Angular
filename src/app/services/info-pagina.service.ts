@@ -9,7 +9,7 @@ import { InfoEquipo } from '../interfaces/equipo.interface';
 export class InfoPaginaService {
 
   info: InfoPagina = {};
-  equipo: InfoEquipo =  {};
+  equipo: InfoEquipo[] =  [];
   todoBien = false;
 
   constructor(private http: HttpClient) {
@@ -39,7 +39,7 @@ export class InfoPaginaService {
   private cargarEquipo() {
 
     this.http.get('https://angular-html-1eee0.firebaseio.com/equipo.json')
-             .subscribe( (resp: InfoEquipo) => {
+             .subscribe( (resp: InfoEquipo[]) => {
                this.equipo = resp;
                console.log(this.equipo);
              });
