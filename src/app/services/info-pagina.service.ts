@@ -14,7 +14,7 @@ export class InfoPaginaService {
 
   constructor(private http: HttpClient) {
 
-    console.log('Servicio al tiro!!!');
+    // console.log('Servicio al tiro!!!');
 
     this.cargarInfo();
     this.cargarEquipo();
@@ -28,10 +28,10 @@ export class InfoPaginaService {
 
               this.todoBien = true;
               this.info = resp;
-              console.log(this.info);
+              // console.log(this.info);
 
               // console.log(resp['twitter']);  Haciendo referencia a una propiedad del objeto
-              console.log(resp.email); // Usando una interface para poder usar sus propiedades en codigo
+              // console.log(resp.email); // Usando una interface para poder usar sus propiedades en codigo
 
             });
   }
@@ -41,7 +41,7 @@ export class InfoPaginaService {
     this.http.get('https://angular-html-1eee0.firebaseio.com/equipo.json')
              .subscribe( (resp: InfoEquipo[]) => {
                this.equipo = resp;
-               console.log(this.equipo);
+               // console.log(this.equipo);
              });
   }
 }

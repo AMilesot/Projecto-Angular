@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     }
 
     this.router.navigate(['/search', termino.toLowerCase()]);
-    console.log(termino);
+    // console.log(termino);
 
   }
 

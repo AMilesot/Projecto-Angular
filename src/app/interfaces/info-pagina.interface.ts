@@ -3,9 +3,9 @@ export interface InfoPagina {
   email?: string;
   nombre_corto?: string;
   pagina_autor?: string;
-  facebook?: string;
+  github?: string;
   twitter?: string;
   instagram?: string;
-  tumblr?: string;
+  linkedin?: string;
   equipo_trabajo?: any[];
 }

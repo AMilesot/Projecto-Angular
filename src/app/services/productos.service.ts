@@ -15,7 +15,7 @@ export class ProductosService {
 
   constructor(private http: HttpClient) {
 
-    console.log('Servicio de productos Cargado al 100');
+    // console.log('Servicio de productos Cargado al 100');
     this.cargarProductos();
     this.cargarProductosDetalle();
 
@@ -43,7 +43,7 @@ export class ProductosService {
                   case '0':
                   {
                     this.productos = resp;
-                    console.log(this.productos);
+                    // console.log(this.productos);
                     this.cargando = false;
                   }
                   break;
@@ -51,7 +51,7 @@ export class ProductosService {
                   case '1':
                   {
                     this.productoDetalle = resp;
-                    console.log(this.productoDetalle);
+                    // console.log(this.productoDetalle);
                     this.cargando = false;
                   }
                   break;
@@ -64,7 +64,7 @@ export class ProductosService {
    }
 
     getProducto(id: string) {
-     return this.http.get(`https://angular-html-1eee0.firebaseio.com/productos/${id}.json`);
+     return this.http.get(`https://angular-html-1eee0.firebaseio.com/productos/${id}.json`); // propiedad del EMS6 para concatenar
      // observable (prepara la informacion para ser leida y utilizada en otro lugar donde se pueda suscribir)
    }
 
@@ -78,6 +78,7 @@ export class ProductosService {
         this.filtrarProductos(termino);
       });
     }
+    // tslint:disable-next-line:one-line
     else {
       // Aplicar el filtro
       this.filtrarProductos(termino);
@@ -87,7 +88,7 @@ export class ProductosService {
        return true;
      });*/
 
-     console.log(this.productosFiltrado);
+     // console.log(this.productosFiltrado);
    }
 
    private filtrarProductos(termino: string) {
